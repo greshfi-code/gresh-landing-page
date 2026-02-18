@@ -1,7 +1,7 @@
 import ReusableWorkCard from './ReusableWorkCard';
 import setUps1 from '../assets/setup1.png'
-import setUps2 from '../assets/setUp2.png'
-import setUps3 from '../assets/setUp3.png'
+import setUps2 from '../assets/setup2.png'
+import setUps3 from '../assets/setup3.png'
 const cardDetails = [
   {
     image: setUps1,
