@@ -1,4 +1,3 @@
-import React from 'react';
 import { Instagram, Twitter } from 'lucide-react';
 export function Footer() {
   return (
@@ -7,16 +6,16 @@ export function Footer() {
         <div>© 2025 Gresh. All rights reserved.</div>
 
         <div className="flex items-center gap-6">
-          <a href="#" className="hover:text-[#0acf83] transition-colors">
+          <a href="instagram.com/usegresh" className="hover:text-[#0acf83] transition-colors">
             <Instagram className="w-4 h-4" />
           </a>
-          <a href="#" className="hover:text-[#0acf83] transition-colors">
+          <a href="x.com/usegresh" className="hover:text-[#0acf83] transition-colors">
             <Twitter className="w-4 h-4" />
           </a>
         </div>
 
         <div className="flex items-center gap-8">
-          <a href="#" className="hover:text-[#0acf83] transition-colors">
+          <a href="https://www.linkedin.com/company/gresh-finance/" className="hover:text-[#0acf83] transition-colors">
             About us
           </a>
           <a href="#" className="hover:text-[#0acf83] transition-colors">

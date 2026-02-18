@@ -1,12 +1,22 @@
 import React from 'react';
-import { ArrowRight, CreditCard, Wifi } from 'lucide-react';
+
 import { SiAdobeillustrator, SiNike, SiNotion, SiApple } from "react-icons/si";
 import { FaFacebook, FaAmazon, FaSlack } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import iphone from '../assets/iphone.png';
+import { BrandPill } from './ui/BrandPills'
+import {
+  Slack,
+  Command,
+  Figma,
+  Chrome,
+  ShoppingBag,
+  CreditCard,
+  PenTool,
+} from 'lucide-react'
 export function HeroSection() {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-[#0d2f28] to-[#051a16] min-h-screen flex flex-col items-center text-center px-4">
+    <section className="relative pt-32 pb-0 overflow-hidden bg-gradient-to-b from-[#0d2f28] to-[#051a16] min-h-screen flex flex-col items-center text-center px-4">
       {/* Background Grid Effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -36,66 +46,106 @@ export function HeroSection() {
       </button>
 
       {/* Phone Mockup Area */}
-      <div className="relative w-full max-w-screen mx-auto top-20 flex-1 flex items-center justify-center">
-        {/* Floating Badges - Left */}
-        <div className="absolute top-10 left-0 w-64 h-96 hidden md:block">
-          <div className="absolute top-0 left-2 rotate-6">
-            <Badge icon={<FaSlack className="w-3 h-3" />} label="Slack" />
-          </div>
-          <div className="absolute top-16 left-8 -rotate-3">
-            <Badge icon={<SiNotion className="w-3 h-3" />}     label="Notion" />
-          </div>
-          <div className="absolute top-32 left-1 rotate-12">
-            <Badge icon={<SiAdobeillustrator className="w-3 h-3" />} label="Adobe" />
-          </div>
-          <div className="absolute top-48 left-6 -rotate-6">
-            <Badge icon={<FcGoogle className="w-3 h-3" />} label="Google Workspace" />
-          </div>
-          <div className="absolute top-32 left-1 rotate-12">
-            <Badge icon={<SiNike className="w-3 h-3" />} label="Nike" />
-          </div>
-          <div className="absolute top-48 left-6 -rotate-6">
-            <Badge icon="N" label="Nike" />
-          </div>
+      <div className="relative w-full mx-auto flex-1 flex items-end justify-center">
+        {/* Phone */}
+        <div className="relative z-20 w-full">
+          <img src={iphone} alt="iPhone Mockup" className="w-full max-w-[400px] mx-auto object-contain" />
         </div>
 
-        {/* Floating Badges - Right */}
-          <div className="absolute top-10 right-0 w-64 h-96 hidden md:block">
-          <div className="absolute top-2 right-4 -rotate-12">
-            <Badge icon={<FaSlack className="w-3 h-3" />} label="Slack" />
-          </div>
-          <div className="absolute top-20 right-10 rotate-6">
-            <Badge icon={<SiNike className="w-3 h-3" />} label="Nike" />
-          </div>
-          <div className="absolute top-36 right-28 -rotate-12">
-            <Badge icon={<SiAdobeillustrator className="w-3 h-3" />} label="Adobe" />
-          </div>
-          <div className="absolute top-52 right-28 rotate-9">
-            <Badge icon={<FaAmazon className="w-3 h-3" />} label="Amazon" />
-          </div>
-          <div className="absolute top-36 right-2 -rotate-3">
-            <Badge icon={<SiNotion className="w-3 h-3" />} label="Notion" />
-          </div>
-          <div className="absolute top-52 right-0 rotate-9">
-            <Badge icon={<SiApple className="w-3 h-3" />} label="Apple" />
-          </div>
-        </div>
+        {/* Floating Pills */}
+        <div className="absolute inset-0 w-full pointer-events-none">
+          {/* Bottom Left Cluster */}
+          <BrandPill
+            icon={Slack}
+            label="Slack"
+            className="bottom-32 left-6 -rotate-12"
+            style={{
+              animation: 'float 6s ease-in-out infinite',
+            }}
+          />
+          <BrandPill
+            icon={Command}
+            label="Notion"
+            className="bottom-16 left-28 rotate-6"
+            style={{
+              animation: 'float 7s ease-in-out infinite 1s',
+            }}
+          />
+          <BrandPill
+            icon={Chrome}
+            label="Google Workspace"
+            className="bottom-2 left-14 -rotate-3"
+            style={{
+              animation: 'float 8s ease-in-out infinite 2s',
+            }}
+          />
+          <BrandPill
+            icon={PenTool}
+            label="Adobe"
+            className="bottom-40 left-36 rotate-12"
+            style={{
+              animation: 'float 5s ease-in-out infinite 0.5s',
+            }}
+          />
+          <BrandPill
+            icon={Figma}
+            label="Figma"
+            className="bottom-24 left-20 rotate-6"
+            style={{
+              animation: 'float 6s ease-in-out infinite 1.2s',
+            }}
+          />
 
-        {/* Phone Device */}
-        <div className=''>
-          <img src={iphone} alt="iPhone Mockup" className="w-full max-w-[400px] mx-auto" />
+          {/* Bottom Right Cluster */}
+          <BrandPill
+            icon={Slack}
+            label="Slack"
+            className="bottom-36 right-8 rotate-12"
+            style={{
+              animation: 'float 6s ease-in-out infinite 1.5s',
+            }}
+          />
+          <BrandPill
+            icon={Command}
+            label="Notion"
+            className="bottom-20 right-24 -rotate-6"
+            style={{
+              animation: 'float 7s ease-in-out infinite 0.5s',
+            }}
+          />
+          <BrandPill
+            icon={ShoppingBag}
+            label="Amazon"
+            className="bottom-4 right-4 rotate-3"
+            style={{
+              animation: 'float 8s ease-in-out infinite 2.5s',
+            }}
+          />
+          <BrandPill
+            icon={CreditCard}
+            label="Nike"
+            className="bottom-28 right-12 -rotate-12"
+            style={{
+              animation: 'float 5s ease-in-out infinite 1s',
+            }}
+          />
+          <BrandPill
+            icon={Figma}
+            label="Adidas"
+            className="bottom-12 right-24 -rotate-6"
+            style={{
+              animation: 'float 6s ease-in-out infinite 1.8s',
+            }}
+          />
         </div>
       </div>
+
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0) rotate(var(--tw-rotate)); }
+          50% { transform: translateY(-15px) rotate(var(--tw-rotate)); }
+        }
+      `}</style>
     </section>);
-
-}
-function Badge({ icon, label }: { icon: string | React.ReactNode; label: string; }) {
-  return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-[#1a1a1a]/80 backdrop-blur-md border border-white/5 rounded-full shadow-xl">
-      <div className="w-5 h-5 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-[10px] font-bold text-white">
-        {typeof icon === 'string' ? icon : icon}
-      </div>
-      <span className="text-sm font-medium text-gray-300">{label}</span>
-    </div>);
 
 }

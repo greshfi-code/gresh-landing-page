@@ -41,14 +41,14 @@ export function AccountSetupSection() {
   const currentItem = infoGrid[currentIndex];
 
   return (
-    <section className="py-24 bg-[#1a1a1a] text-white overflow-hidden h-screen">
+    <section className="py-0 bg-[#1a1a1a] text-white overflow-hidden flex items-end min-h-screen">
 
-      <div className="max-w-7xl mx-auto h-fit px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto w-full px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-end pb-0">
         {/* Phone Mockup - Left Side */}
-        <img src={currentItem.image} alt={currentItem.title} className="w-full max-w-md mx-auto" />
+        <img src={currentItem.image} alt={currentItem.title} className="w-full max-w-md mx-auto object-contain" />
 
         {/* Content - Right Side */}
-        <div>
+        <div className='pb-10'>
           <div className="w-12 h-12 rounded-full flex items-center justify-center mb-6">
               <img src={logo} alt='logo' className='w-6 h-6' />
           </div>

@@ -25,7 +25,10 @@ const cardDetails = [
 export function HowItWorksPage() {
   return (
    
-      <section className="relative pt-32 pb-20 bg-gradient-to-b from-[#0d2f28] to-[#051a16] text-center px-4">
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-[#0d2f28] to-[#051a16] text-center px-4 ">
+        {/* Background Grid Effect */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+        
         <h1 className=" mx-auto mb-6 text-4xl font-bold leading-tight text-white md:text-6xl  tracking-tight">
          No long talks! <br />  Get a card in minutes
         </h1>
