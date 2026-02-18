@@ -1,8 +1,3 @@
-import React from 'react';
-
-import { SiAdobeillustrator, SiNike, SiNotion, SiApple } from "react-icons/si";
-import { FaFacebook, FaAmazon, FaSlack } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import iphone from '../assets/iphone.png';
 import { BrandPill } from './ui/BrandPills'
 import {
@@ -33,12 +28,12 @@ export function HeroSection() {
 
       {/* Main Content */}
       <h3 className="max-w-4xl mx-auto mb-6 text-4xl font-bold leading-tight text-white md:text-6xl lg:text-[56px] tracking-tight">
-       One wallet. Limitless virtual cards.
-    
+        One wallet. Limitless virtual cards.
+
       </h3>
 
       <p className="max-w-2xl mx-auto mb-10 text-lg text-gray-400 md:text-xl">
-       Create multiple virtual cards, fund them easily, and pay for global services without unnecessary charges or restrictions.
+        Create multiple virtual cards, fund them easily, and pay for global services without unnecessary charges or restrictions.
       </p>
 
       <button className="px-8 py-4 text-base font-bold text-[#0d2f28] bg-[#33ff66] rounded-full hover:scale-105 transition-transform duration-200 mb-8 shadow-[0_0_20px_rgba(51,255,102,0.3)]">
